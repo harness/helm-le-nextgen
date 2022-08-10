@@ -1,0 +1,18 @@
+apiVersion: v1
+entries:
+  le-nextgen:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2022-08-10T18:40:54.514928+05:30"
+    dependencies:
+    - name: harness-common
+      repository: https://harness.github.io/helm-common/charts
+      version: 0.1.0
+    description: A Helm chart for Kubernetes
+    digest: af572a1cea233e91528da58ae288ba43b1f7c6730c5b6da7000f13ea63055f7e
+    name: le-nextgen
+    type: application
+    urls:
+    - le-nextgen-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-08-10T18:40:54.513375+05:30"
