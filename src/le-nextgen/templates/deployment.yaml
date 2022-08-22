@@ -29,12 +29,12 @@ spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
-      {{- end }} 
+      {{- end }}
       containers:
         - envFrom:
             - configMapRef:
                 name: le-nextgen
-          image: {{ include "harnesscommon.names.imagename" . }}
+          image: {{ include "common.images.image" (dict "imageRoot" .Values.image "global" .Values.global) }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
